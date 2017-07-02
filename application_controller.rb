@@ -8,7 +8,11 @@ class MyApp < Sinatra::Base
   end
 
 
-
+post '/results' do
+   name=params[:name]
+   @answer=klossy(name.length)
+   erb :results
+  end
 
 
 
